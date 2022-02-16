@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <style>
+        canvas{
+            background:linear-gradient(#747BA0, #CBB5BB, #E5B6AB, #FFA358);
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="350" height="350" style="border:4px solid #d3d3d3;">
+        Your browser does not support the HTML canvas tag.</canvas>
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.lineWidth = 2;
+        ctx.moveTo(100, 180);
+        ctx.lineTo(230, 180);
+        ctx.strokeStyle = '#ae58b6';
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(211,150,35,3.7,7.3);
+        ctx.strokeStyle = '#ae58b6';
+        ctx.stroke();
+        ctx.moveTo(100, 181);
+        ctx.lineTo(100, 119);
+        ctx.strokeStyle = '#ae58b6';
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(130,136,30,2,3.2);
+        ctx.strokeStyle = '#ae58b6';
+        ctx.stroke();
+        ctx.moveTo(155, 150);
+        ctx.lineTo(155, 119);
+        ctx.strokeStyle = '#ae58b6';
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(115,140,5,3,6.4);
+        ctx.strokeStyle = '#ae58b6';
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(137,140,5,3,6.4);
+        ctx.strokeStyle = '#ae58b6';
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(121,146,5,6.2,1.7);
+        ctx.strokeStyle = '#ae58b6';
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(131,146,5,1.4,3.2);
+        ctx.strokeStyle = '#ae58b6';
+        ctx.stroke();
+        ctx.moveTo(135, 129);
+        ctx.lineTo(155, 119);
+        ctx.strokeStyle = '#ae58b6';
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(127,143,17,4.2,5.2);
+        ctx.strokeStyle = '#ae58b6';
+        ctx.stroke();
+        ctx.moveTo(99, 120);
+        ctx.lineTo(118, 128);
+        ctx.strokeStyle = '#ae58b6';
+        ctx.stroke();
+        function drawCircle(x, y, radiusX, radiusY, rotation) {
+            ctx.beginPath();
+            ctx.ellipse(x, y, radiusX, radiusY, rotation, 1.4, 4);
+            ctx.stroke();
+        }
+    
+        var deg = 90;
+        var rad = deg * (Math.PI / 120.0);
+        drawCircle(165, 180, 38, 30, rad);
+
+        ctx.strokeStyle = '#ae58b6';
+        ctx.stroke();
+</script>
+    </script>
+</body>
+</html>
